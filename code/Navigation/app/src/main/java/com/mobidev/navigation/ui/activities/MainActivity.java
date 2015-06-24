@@ -1,27 +1,41 @@
 package com.mobidev.navigation.ui.activities;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Handler;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.Scopes;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.Scope;
+import com.google.android.gms.plus.Plus;
+import com.google.android.gms.plus.model.people.Person;
 import com.mobidev.navigation.R;
 import com.mobidev.navigation.ui.fragments.FirstFragment;
 import com.mobidev.navigation.ui.fragments.SecondFragment;
+import com.mobidev.navigation.ui.utils.PrefUtils;
+import com.mobidev.navigation.ui.widgets.RoundedImageView;
+import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Transformation;
 
 
 public class MainActivity extends AppCompatActivity implements
-        NavigationView.OnNavigationItemSelectedListener {
+        NavigationView.OnNavigationItemSelectedListener, GoogleApiClient.ConnectionCallbacks,
+        GoogleApiClient.OnConnectionFailedListener {
     private DrawerLayout mDrawerLayout;
+    private TextView txtUsername;
+    private RoundedImageView roundedImageView;
 
     private int mNavItemId;
     private final Handler mDrawerActionHandler = new Handler();
@@ -33,10 +47,36 @@ public class MainActivity extends AppCompatActivity implements
     private final FirstFragment mFirstFragment = new FirstFragment();
     private final SecondFragment mSecondFragment = new SecondFragment();
 
+    /* Client for accessing Google APIs */
+    private GoogleApiClient mGoogleApiClient;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        PrefUtils.init(getApplicationContext());
+        /**
+         * check whether user has signed in
+         */
+        if (!PrefUtils.isLoginDone(getApplicationContext())) {
+            startActivity(new Intent(getApplicationContext(), SigninActivity.class));
+            finish();
+        }
+
+        System.err.println(PrefUtils.isLoginDone(getApplicationContext()));
+
+        // Build GoogleApiClient with access to basic profile
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .addApi(Plus.API)
+                .addScope(new Scope(Scopes.PROFILE))
+                .build();
+
+        txtUsername = (TextView) findViewById(R.id.username);
+        roundedImageView = (RoundedImageView) findViewById(R.id.userPhoto);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -153,5 +193,41 @@ public class MainActivity extends AppCompatActivity implements
     protected void onSaveInstanceState(final Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt(NAV_ITEM_ID, mNavItemId);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mGoogleApiClient.connect();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mGoogleApiClient.disconnect();
+    }
+
+    @Override
+    public void onConnected(Bundle bundle) {
+
+        if (Plus.PeopleApi.getCurrentPerson(mGoogleApiClient) != null) {
+            Person currentPerson = Plus.PeopleApi.getCurrentPerson(mGoogleApiClient);
+
+            txtUsername.setText(currentPerson.getDisplayName());
+            Picasso.with(getApplicationContext())
+                    .load(currentPerson.getImage().getUrl())
+                    .into(roundedImageView);
+        }
+
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+
     }
 }

@@ -9,4 +9,9 @@
 
     <string name="item_1">First Item</string>
     <string name="item_2">Second Item</string>
+
+    <string name="sign_in_button_text">Sign in with google</string>
+
+    <!-- Google Play Services error for Toast -->
+    <string name="play_services_error_fmt">Google Play Services Error: %i</string>
 </resources>
