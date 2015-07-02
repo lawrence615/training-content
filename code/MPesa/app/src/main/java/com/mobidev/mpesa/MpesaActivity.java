@@ -32,7 +32,6 @@ public class MpesaActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.send_money:
-//                new ConfirmDialogFragment().show(getSupportFragmentManager(), "");
                 startActivity(new Intent(getApplicationContext(), SendMoneyActivity.class));
                 break;
             default:
@@ -41,31 +40,5 @@ public class MpesaActivity extends AppCompatActivity implements View.OnClickList
     }
 
 
-    public static class ConfirmDialogFragment extends DialogFragment {
-        @Override
-        public Dialog onCreateDialog(Bundle savedInstanceState) {
-            // Use the Builder class for convenient dialog construction
-            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setMessage("Send ksh200 to 0723384122")
-                    .setPositiveButton("OK",
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog,
-                                                    int id) {
-                                    Intent login = new Intent(getActivity(),
-                                            MainActivity.class);
-                                    startActivity(login);
-                                    getActivity().finish();
-                                }
-                            })
-                    .setNegativeButton("Cancel",
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog,
-                                                    int id) {
-                                    // User cancelled the dialog
-                                }
-                            });
-            // Create the AlertDialog object and return it
-            return builder.create();
-        }
-    }
+
 }
