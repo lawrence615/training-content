@@ -21,6 +21,8 @@
             android:name=".PhoneNoActivity"
             android:label="@string/title_activity_phone_no"></activity>
         <activity android:name=".SendMoneyActivity"></activity>
+        <activity android:name=".AmountActivity"></activity>
+        <activity android:name=".PinActivity"></activity>
     </application>
 
 </manifest>
