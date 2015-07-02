@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/contact_us"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/divider"
+                android:layout_alignParentTop="true"
+                android:padding="10dp"
+                android:text="@string/contacts"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="fill_parent"
+                android:layout_height="0.7dp"
+                android:layout_below="@+id/contact_us"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="#DADADC" />
+
+
+            <Button
+                android:id="@+id/callus"
+                style="@style/link"
+                android:layout_below="@id/divider"
+                android:drawableLeft="@mipmap/ic_launcher"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingLeft="30dp"
+                android:paddingTop="5dp"
+                android:text="@string/call_us"
+                android:textColor="@color/black" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_alignLeft="@id/callus"
+                android:layout_below="@id/callus"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="30dp"
+                android:background="#DADADC" />
+
+            <Button
+                android:id="@+id/mailus"
+                style="@style/link"
+                android:layout_below="@id/divider2"
+                android:drawableLeft="@mipmap/ic_launcher"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingLeft="30dp"
+                android:paddingTop="5dp"
+                android:text="@string/mail_us"
+                android:textColor="@color/black" />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="wrap_content"
+                android:layout_height="0.7dp"
+                android:layout_alignLeft="@id/mailus"
+                android:layout_below="@id/mailus"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="30dp"
+                android:background="#DADADC" />
+
+            <Button
+                android:id="@+id/website"
+                style="@style/link"
+                android:layout_below="@id/divider3"
+                android:drawableLeft="@mipmap/ic_public_black_36dp"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingLeft="30dp"
+                android:paddingTop="5dp"
+                android:text="@string/website"
+                android:textColor="@color/black" />
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="wrap_content"
+                android:layout_height="0.7dp"
+                android:layout_alignLeft="@id/website"
+                android:layout_below="@id/website"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="30dp"
+                android:background="#DADADC" />
+
+            <Button
+                android:id="@+id/location"
+                style="@style/link"
+                android:layout_below="@id/divider4"
+                android:drawableLeft="@mipmap/ic_launcher"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingLeft="30dp"
+                android:paddingTop="5dp"
+                android:text="@string/location"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="fill_parent"
+                android:layout_height="0.7dp"
+                android:layout_below="@+id/location"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="#DADADC" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

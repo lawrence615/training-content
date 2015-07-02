@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Implicit Intents</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Contacts form -->
+    <string name="contacts">Contact us</string>
+    <string name="call_us">+254 (0) 20 2727000</string>
+    <string name="mail_us">info@mlab.co.ke</string>
+    <string name="website">www.mlab.co.ke</string>
+    <string name="location">3rd Floor, Bishop Magua, Ngong Road, Nairobi, Kenya</string>
+</resources>
