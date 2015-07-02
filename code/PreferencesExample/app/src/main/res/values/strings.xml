@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">PreferencesExample</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+
+    <!--View Pager Text-->
+    <string name="vp_fragment_one_title">Welcome!</string>
+    <string name="vp_fragment_one_desc">Swipe to learn about Maskani</string>
+    <string name="vp_fragment_two_title">Post</string>
+    <string name="vp_fragment_two_desc">Post details of vacant houses, apartments or plots</string>
+    <string name="vp_fragment_three_title">Search</string>
+    <string name="vp_fragment_three_desc">Search available house, apartments, or plots</string>
+    <string name="vp_fragment_four_title">Enjoy convenience, anytime</string>
+
+
+    <!--Button text-->
+    <string name="btn_submit">Submit your post</string>
+    <string name="btn_launch_post_activity">Post house</string>
+    <string name="btn_launch_view_house_activity">View houses posted</string>
+    <string name="btn_get_started">Get started</string>
+</resources>
