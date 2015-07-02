@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Wednesday</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!--Button texts-->
+    <string name="btn_safcom">Safaricom+</string>
+    <string name="btn_mpesa">Mpesa</string>
+    <string name="btn_send_money">Send money</string>
+    <string name="btn_withdraw_cash">Withdraw Cash</string>
+    <string name="btn_buy_airtime">Buy airtime</string>
+    <string name="btn_m_shwari">M-Shwari</string>
+    <string name="btn_lipa_na_mpesa">Lipa na M-PESA</string>
+    <string name="btn_my_account">My account</string>
+
+
+
+    <string name="title_activity_mpesa">MpesaActivity</string>
+</resources>
