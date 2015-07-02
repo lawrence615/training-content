@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">FragmentBasics</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!--Button labels-->
+    <string name="static_frags">Static fragments</string>
+    <string name="dynamic_frags">Dynamic fragments</string>
+    <string name="click_me">Click me!</string>
+    <string name="frag_one">Fragment One</string>
+    <string name="frag_two">Fragment Two</string>
+
+    <!--activity labels-->
+    <string name="static_fragment_activity">Static Fragment</string>
+    <string name="dynamic_fragment_activity">Dynamic Fragment</string>
+
+    <!--TextView-->
+    <string name="fragment_one">Fragment One</string>
+    <string name="fragment_two">Fragment Two</string>
+
+</resources>
