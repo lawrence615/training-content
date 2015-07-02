@@ -22,8 +22,12 @@
 
     <!--EditText hints-->
     <string name="hint_phone_no">Digits (0-9,*,#,+) 0-20</string>
+    <string name="hint_amount">Digits (0-9,*,#,+) 0-20</string>
+    <string name="hint_pin">Digits (0-9,*,#,+) 0-20</string>
 
     <!--TV Titles-->
     <string name="title_phone_no">Enter phone no.</string>
+    <string name="title_amount">Enter amount</string>
+    <string name="title_pin">Enter pin</string>
 
 </resources>
