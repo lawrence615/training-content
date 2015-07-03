@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mobidev.mpesa" >
+    package="com.mobidev.androiduserinterface" >
 
     <application
         android:allowBackup="true"
@@ -16,14 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MpesaActivity" />
-        <activity
-            android:name=".PhoneNoActivity"
-            android:label="@string/title_activity_phone_no" />
-        <activity android:name=".SendMoneyActivity" />
-        <activity android:name=".AmountActivity" />
-        <activity android:name=".PinActivity" />
-
     </application>
 
 </manifest>

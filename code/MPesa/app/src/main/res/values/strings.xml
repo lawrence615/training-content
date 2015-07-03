@@ -29,5 +29,6 @@
     <string name="title_phone_no">Enter phone no.</string>
     <string name="title_amount">Enter amount</string>
     <string name="title_pin">Enter pin</string>
+    <string name="title_activity_dummy_class2">DummyClass2</string>
 
 </resources>
