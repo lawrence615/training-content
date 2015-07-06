@@ -8,10 +8,17 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/ed_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_search" />
+
     <ListView
         android:id="@+id/my_listView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/ed_search"
         android:divider="@android:color/transparent"
         android:dividerHeight="@dimen/divider_height"
         android:padding="@dimen/common_padding">
