@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/common_padding">
+
+    <EditText
+        android:id="@+id/lastname"
+        style="@style/MyEditText"
+        android:hint="@string/hint_last_name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/firstname"
+        style="@style/MyEditText"
+        android:hint="@string/hint_first_name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/email"
+        style="@style/MyEditText"
+        android:hint="@string/hint_email"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/password"
+        style="@style/MyEditText"
+        android:hint="@string/hint_password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/confirm_password"
+        style="@style/MyEditText"
+        android:hint="@string/hint_confirm_password"
+        android:inputType="textPassword" />
+
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_colour"
+        android:text="@string/register"
+        android:textColor="@color/btn_text_colour" />
+
+</LinearLayout>

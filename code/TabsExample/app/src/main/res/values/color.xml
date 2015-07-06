@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--App Theme-->
+    <color name="primary">#f44336</color>
+    <color name="primary_dark">#d32f2f</color>
+    <color name="accent">#fafafa</color>
+    <color name="window_background">#eeeeee</color>
+
+    <!--Login and Register Buttons-->
+    <color name="background_colour">#4caf50</color>
+    <color name="btn_text_colour">#fafafa</color>
+
+    <color name="theme_accent_1">#00b0ff</color>
+
+</resources>
