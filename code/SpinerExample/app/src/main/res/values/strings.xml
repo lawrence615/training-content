@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SpinerExample</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!--Activities' Labels-->
+    <string name="simple_spinner_activity">Simple Spinner</string>
+    <string name="store_selected_pos">Store Selected Position</string>
+    <string name="custom_adapter_spinner">Custom Adapter Spinner</string>
+    <string name="sqlite_data_spinner_activity">SQLite Data Spinner</string>
+    <string name="mysql_data_spinner_activity">MySQL Data Spinner</string>
+
+    <!--Button Text-->
+    <string name="btn_get_selected">Get Selected</string>
+</resources>

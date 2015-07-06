@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="app_black">#000000</color>
+    <color name="app_light_grey">#757575</color>
+    <color name="app_white">#fafafa</color>
+    <color name="app_green">#43a047</color>
+
+    <!-- Spinner -->
+    <color name="body_text_2_inverse">#455a64</color>
+    <color name="theme_primary_light">#7986cb</color>
+    <color name="list_dropdown_foreground_normal">#ff333333</color>
+</resources>
