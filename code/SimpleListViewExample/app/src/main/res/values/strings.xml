@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SimpleListViewExample</string>
+    <string name="county_details">Details</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+</resources>
