@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+
+        <!-- Customize your theme here. -->
+
+        <!--ActionBar colour-->
+        <item name="colorPrimary">@color/app_blue_colorPrimary</item>
+        <item name="actionModeStyle">@style/ListViewDatabase.ActionMode</item>
+    </style>
+
+    <style name="ListViewDatabase.ActionMode" parent="@style/Widget.AppCompat.ActionMode">
+        <item name="background">@color/app_blue_colorPrimary</item>
+    </style>
+
+</resources>

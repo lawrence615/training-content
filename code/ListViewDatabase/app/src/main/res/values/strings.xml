@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ListViewDatabase</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!--menu options-->
+    <string name="add">Add new</string>
+
+    <!--Activity labels-->
+    <string name="new_county_label">Add New County</string>
+    <string name="edi_county_label">Edit County Details</string>
+
+    <!--EditText hint text-->
+    <string name="enter_county_name">Enter county name&#8230;</string>
+    <string name="enter_county_governour">Enter county governour&#8230;</string>
+    <string name="enter_county_description">Enter county description&#8230;</string>
+
+    <!--Buttons-->
+    <string name="submit">Save county details</string>
+</resources>

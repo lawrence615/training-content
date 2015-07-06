@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    tools:context=".NewCountyActivity"
+    android:padding="@dimen/common_padding"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/county_name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_county_name" />
+
+    <EditText
+        android:id="@+id/county_governour_input"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_county_governour" />
+
+    <EditText
+        android:id="@+id/county_description_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top"
+        android:minLines="8"
+        android:gravity="left|top"
+        android:ems="10"
+        android:hint="@string/enter_county_description" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/app_green"
+        android:layout_marginTop="@dimen/margin_top"
+        android:textColor="@color/app_white"
+        android:padding="@dimen/common_padding"
+        android:textStyle="bold"
+        android:text="@string/submit" />
+
+</LinearLayout>
