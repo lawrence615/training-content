@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -12,14 +14,16 @@ import java.util.ArrayList;
 /**
  * Created by lawrence on 4/18/15.
  */
-public class MyListAdapter extends BaseAdapter {
+public class MyListAdapter extends BaseAdapter implements Filterable {
 
     private Context mContext;
     private ArrayList<CountyModel> listItems;
+    private ArrayList<CountyModel> mStringFilterList;
 
     public MyListAdapter(Context context, ArrayList<CountyModel> items) {
         this.mContext = context;
         this.listItems = items;
+        this.mStringFilterList = items;
 
     }
 
@@ -65,6 +69,42 @@ public class MyListAdapter extends BaseAdapter {
 
 
         return view;
+    }
+
+    @Override
+    public Filter getFilter() {
+        Filter filter = new Filter() {
+
+            @SuppressWarnings("unchecked")
+            @Override
+            protected void publishResults(CharSequence constraint, FilterResults results) {
+                listItems=(ArrayList<CountyModel>) results.values;
+                notifyDataSetChanged();
+            }
+
+            //Invoked in a worker thread to filter the data according to the constraint.
+            @Override
+            protected FilterResults performFiltering(CharSequence constraint) {
+                FilterResults results = new FilterResults();
+                if (constraint != null && constraint.length() > 0) {
+                    ArrayList<CountyModel> filterList = new ArrayList<CountyModel>();
+                    for (int i = 0; i < mStringFilterList.size(); i++) {
+                        if ((mStringFilterList.get(i).getCountyName().toUpperCase())
+                                .contains(constraint.toString().toUpperCase())) {
+                            CountyModel counties = new CountyModel(mStringFilterList.get(i).getCountyName(), mStringFilterList.get(i).getCountyGovernor(), mStringFilterList.get(i).getCountyDesc());
+                            filterList.add(counties);
+                        }
+                    }
+                    results.count = filterList.size();
+                    results.values = filterList;
+                } else {
+                    results.count = mStringFilterList.size();
+                    results.values = mStringFilterList;
+                }
+                return results;
+            }
+        };
+        return filter;
     }
 
     private static class ViewHolder {
