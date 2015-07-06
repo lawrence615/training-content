@@ -6,11 +6,11 @@
 
     <ListView
         android:id="@+id/my_listView"
-        android:padding="@dimen/common_padding"
         android:layout_width="fill_parent"
-        android:dividerHeight="@dimen/divider_height"
+        android:layout_height="wrap_content"
         android:divider="@android:color/transparent"
-        android:layout_height="wrap_content">
+        android:dividerHeight="@dimen/divider_height"
+        android:padding="@dimen/common_padding">
 
     </ListView>
 
