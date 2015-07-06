@@ -218,6 +218,7 @@ public class MainActivity extends AppCompatActivity implements
             Picasso.with(getApplicationContext())
                     .load(currentPerson.getImage().getUrl())
                     .into(roundedImageView);
+            Picasso.with(getApplicationContext()).load()
         }
 
     }

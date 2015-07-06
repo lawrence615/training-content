@@ -1,10 +1,12 @@
 package com.mobidev.layouts;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -31,6 +33,12 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            return true;
+        }
+
+        if (id == R.id.about_app) {
+//            startActivity(new Intent(getApplicationContext(), AboutActivity.class));
+            Toast.makeText(getApplicationContext(), "Testing 1 2 3", Toast.LENGTH_SHORT).show();
             return true;
         }
 

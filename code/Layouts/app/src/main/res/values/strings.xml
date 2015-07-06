@@ -5,6 +5,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="action_about">About</string>
+    <string name="action_logout">Logout</string>
 
     <string name="title">Lionel Messi</string>
     <string name="desc">An Argentine professional footballer who plays for Spanish club Barcelona and the Argentine national team</string>
