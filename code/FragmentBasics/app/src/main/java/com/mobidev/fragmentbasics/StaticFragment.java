@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * Created by lawrence on 7/2/15.
@@ -21,6 +22,9 @@ public class StaticFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_static, container, false);
         // Setup handles to view objects here
         btnClickMe = (Button) view.findViewById(R.id.clickme);
+
+
+//        Toast.makeText(getActivity().getApplicationContext(),"",Toast.LENGTH_SHORT).show();
         return view;
     }
 }
