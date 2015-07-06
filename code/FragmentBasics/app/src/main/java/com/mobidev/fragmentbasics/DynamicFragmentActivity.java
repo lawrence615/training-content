@@ -39,7 +39,7 @@ public class DynamicFragmentActivity extends AppCompatActivity implements View.O
                         .replace(R.id.placeholder, new FragmentOne())
                         .commit();
                 break;
-            case R.id.fragment_two:
+            case R.id.fragment_two://FragmentTwo
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.placeholder, new FragmentTwo())
                         .commit();
