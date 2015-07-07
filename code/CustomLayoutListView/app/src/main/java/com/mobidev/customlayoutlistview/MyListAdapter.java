@@ -78,7 +78,7 @@ public class MyListAdapter extends BaseAdapter implements Filterable {
             @SuppressWarnings("unchecked")
             @Override
             protected void publishResults(CharSequence constraint, FilterResults results) {
-                listItems=(ArrayList<CountyModel>) results.values;
+                listItems = (ArrayList<CountyModel>) results.values;
                 notifyDataSetChanged();
             }
 
