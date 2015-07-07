@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -73,7 +74,8 @@ public class NewCountyActivity extends AppCompatActivity {
         /**
          * if this input field is empty, we request the user to provide a value
          */
-        if (edCountyName.getText().length() == 0) {
+//        edCountyName.getText().length() == 0
+        if (TextUtils.isEmpty(edCountyName.getText().toString())) {
             Toast.makeText(getApplicationContext(), "Please enter county name", Toast.LENGTH_SHORT).show();
             return false;
         }
