@@ -3,4 +3,26 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <!--Button Labels-->
+    <string name="universities">Universities</string>
+    <string name="colleges">Colleges</string>
+    <string name="polytechnics">Polytechnics</string>
+    <string name="btn_call_us">Call Us</string>
+    <string name="btn_view_map">Locate Us</string>
+    <string name="btn_submit">Submit</string>
+
+    <!--Activity Titles-->
+    <string name="main_activity_title">Higher Learning Institutions in Kenya</string>
+    <string name="enquiries_activity_title">Submit Your Enquiries Below</string>
+
+    <!--Activity names-->
+    <string name="activity_universities">Universities</string>
+    <string name="activity_more_details">Details</string>
+
+    <!--EditText hint-->
+    <string name="email">Type your email address</string>
+    <string name="subject">Subject</string>
+    <string name="message">Type your message</string>
+
 </resources>
