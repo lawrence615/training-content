@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/app_white"
+    android:padding="@dimen/common_padding"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/university_name"
+        android:layout_width="match_parent"
+        android:text="Kenyatta University"
+        android:textSize="@dimen/text_size_large"
+        android:textColor="@color/app_black"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/university_address"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/university_name"
+        android:textSize="@dimen/text_size_small"
+        android:layout_marginTop="@dimen/margin_top"
+        android:text="Kenyatta University, P.O. Box 43844, Nairobi, Kenya"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/university_desc"
+        android:layout_width="match_parent"
+        android:layout_below="@id/university_address"
+        android:textSize="@dimen/text_size_medium"
+        android:layout_marginTop="@dimen/margin_top"
+        android:textColor="@color/app_light_grey"
+        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/lat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@id/university_desc" />
+
+    <TextView
+        android:id="@+id/lng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@id/lat" />
+
+    <Button
+        android:id="@+id/btnCallUs"
+        android:layout_below="@id/university_desc"
+        android:layout_alignParentLeft="true"
+        android:drawableLeft="@mipmap/ic_action_call"
+        android:text="@string/btn_call_us"
+        style="@style/NormalButton" />
+
+    <Button
+        android:id="@+id/btnViewMap"
+        android:layout_below="@id/university_desc"
+        android:layout_alignParentRight="true"
+        android:drawableLeft="@mipmap/ic_action_place"
+        android:text="@string/btn_view_map"
+        style="@style/NormalButton" />
+
+</RelativeLayout>
