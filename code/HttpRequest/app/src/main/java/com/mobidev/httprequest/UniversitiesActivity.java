@@ -8,6 +8,13 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import com.mobidev.httprequest.adapter.MyCustomAdapter;
+import com.mobidev.httprequest.model.University;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -20,18 +27,26 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 
 /**
  * Created by lawrence on 7/8/15.
  */
-public class UniversitiesActivity extends AppCompatActivity {
+public class UniversitiesActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     private ProgressDialog mProgress;
+
+    private ListView listView;
+    private ArrayList<University> arrList = new ArrayList<University>();
+    private MyCustomAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_universities);
+
+        listView = (ListView) findViewById(R.id.lvUniversities);
+        listView.setOnItemClickListener(this);
 
 
         if (isNetworkAvailable()) {
@@ -47,11 +62,19 @@ public class UniversitiesActivity extends AppCompatActivity {
         }
     }
 
-
     private void fetchDataFromRemoteServer() {
         new NetworkAsyncTask().execute("http://testing.mlab-training.devs.mobi/php_list_db_example/universities.php");
     }
 
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        TextView txtId = (TextView) view.findViewById(R.id.univesity_id);
+        System.out.println(txtId.getText());
+    }
+
+    /**
+     * @see http://developer.android.com/reference/android/os/AsyncTask.html
+     */
     private class NetworkAsyncTask extends AsyncTask<String, Void, String> {
         protected String doInBackground(String... myUrl) {
 
@@ -107,6 +130,14 @@ public class UniversitiesActivity extends AppCompatActivity {
                     String university_name = unisItem.getString("university_name");
                     String description = unisItem.getString("description");
 
+                    University obj = new University(id, university_name, description);
+
+                    arrList.add(obj);
+                    adapter = new MyCustomAdapter(getApplicationContext(), arrList);
+
+                    addToAdapter();
+
+
                     System.err.println(id + " " + university_name + " " + description);
                 }
             } catch (JSONException e) {
@@ -122,6 +153,13 @@ public class UniversitiesActivity extends AppCompatActivity {
                 = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnectedOrConnecting();
+    }
+
+    private void addToAdapter() {
+        adapter = new MyCustomAdapter(getApplicationContext(), arrList);
+        adapter.notifyDataSetChanged();
+        listView.setAdapter(adapter);
+
     }
 
     private void showProgress() {

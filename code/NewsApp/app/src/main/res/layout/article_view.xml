@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:irdac="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/app_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <com.mobidev.newsapp.ui.widgets.RobotoTextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:textColor="@color/articles_title_colour"
+            android:textSize="18sp"
+            irdac:typeface="roboto_regular"
+            tools:ignore="UnusedAttribute" />
+
+        <FrameLayout
+            android:id="@+id/box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                tools:ignore="ContentDescription" />
+
+            <ImageButton
+                android:id="@+id/fullscreen"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="bottom|end"
+                android:background="@null"
+                android:scaleType="center"
+                android:src="@drawable/ic_action_full_screen"
+                tools:ignore="ContentDescription" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <com.mobidev.newsapp.ui.widgets.RelativeTimeTextView
+                android:id="@+id/created_at"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/viewcommentsbtn"
+                android:layout_alignParentLeft="true"
+                android:paddingBottom="5dp"
+                android:textColor="@color/grey_light"
+                irdac:fontFamily="roboto"
+                irdac:textWeight="thin" />
+
+            <ImageButton
+                android:id="@+id/viewcommentsbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:background="@null"
+                android:contentDescription="@string/comment_button"
+                android:src="@mipmap/ic_comment" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:background="#DADADC" />
+
+        <com.mobidev.newsapp.ui.widgets.RobotoTextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:linksClickable="true"
+            android:textColor="@color/content_text_colour"
+            android:textSize="15sp"
+            irdac:fontFamily="roboto"
+            irdac:textWeight="light" />
+
+        <TextView
+            android:id="@+id/slug"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BannerAd</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="banner_ad_unit_id">ca-app-pub-9906965112641368/2048497137</string>
+
+</resources>
