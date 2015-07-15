@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:newsapp="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_background_white"
+    tools:ignore="overdraw">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/title"
+        android:scaleType="centerCrop"
+        tools:ignore="ContentDescription" />
+
+    <com.mobidev.newsapp.ui.widgets.RobotoTextView
+        android:id="@+id/title"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:paddingBottom="4dp"
+        android:paddingLeft="8dp"
+        android:textColor="@color/articles_title_colour"
+        android:textSize="18sp"
+        newsapp:typeface="roboto_regular"
+        tools:ignore="UnusedAttribute" />
+
+    <com.mobidev.newsapp.ui.widgets.RelativeTimeTextView
+        android:id="@+id/created_at"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/image"
+        android:layout_alignLeft="@+id/title"
+        android:layout_alignParentRight="true"
+        android:paddingBottom="5dp"
+        android:paddingLeft="8dp"
+        android:textColor="@color/grey_light"
+        newsapp:fontFamily="roboto"
+        newsapp:textWeight="thin" />
+
+</RelativeLayout>
