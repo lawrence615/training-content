@@ -13,6 +13,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -45,6 +47,14 @@ public class MainActivity extends AppCompatActivity {
 
         mAdapter = new CodingLoveAdapter(getApplicationContext(), recyclerViewItems());
         mRecyclerView.setAdapter(mAdapter);
+//        mRecyclerView.addOnItemTouchListener(
+//                new RecyclerItemClickListener(getApplicationContext(), new RecyclerItemClickListener.OnItemClickListener() {
+//                    @Override
+//                    public void onItemClick(View view, int position) {
+//                        Toast.makeText(getApplicationContext(), "clicked item on position " + position, Toast.LENGTH_SHORT).show();
+//                    }
+//                })
+//        );
     }
 
     private ArrayList<CodingLoveItem> recyclerViewItems() {
