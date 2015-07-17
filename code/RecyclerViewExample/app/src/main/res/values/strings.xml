@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RecyclerViewExample</string>
+
+    <string name="activity_about">About App</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="action_about">About app</string>
+</resources>
