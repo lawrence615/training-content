@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">WidgetExample</string>
+
+    <string name="activity_settings">Settings</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!--Preferences Title -->
+    <string name="title_sms">SMS settings</string>
+
+    <string name="sms_settings">SMS settings</string>
+
+    <string name="phone_no">Enter phone number to send sms to</string>
+    <string name="message">Enter message to send</string>
+
+
+    <string name="save">Save</string>
+</resources>
