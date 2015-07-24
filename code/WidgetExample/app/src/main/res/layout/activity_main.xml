@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#55000000"
     android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="@dimen/common_padding"
-    android:background="#55000000">
+    android:padding="@dimen/common_padding">
 
     <ImageButton
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:src="@drawable/saveme"/>
+        android:layout_width="250dp"
+        android:layout_height="160dp"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/saveme" />
 
 </LinearLayout>
